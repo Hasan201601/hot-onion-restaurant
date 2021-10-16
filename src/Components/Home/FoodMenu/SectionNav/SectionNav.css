@@ -1,0 +1,21 @@
+ul{
+    list-style: none;
+}
+li{
+    display: inline;
+}
+.active{
+    color: red !important;
+    border-bottom: 3px solid red;
+    
+}
+.link{
+    text-decoration: none;
+    color: black;
+    margin-right:2.5rem ;
+    font-weight: 500;
+    font-size: 20px;
+}
+.link:hover{
+    color: black
+}

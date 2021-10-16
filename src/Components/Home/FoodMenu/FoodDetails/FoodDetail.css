@@ -1,0 +1,11 @@
+.number-change-btn{
+    border: 1px solid red;
+    background-color: white;
+    padding: 2px 20px;
+}
+i{
+   font-size: 12px; 
+}
+.fa-plus{
+    color: rgb(192, 8, 8);
+}
