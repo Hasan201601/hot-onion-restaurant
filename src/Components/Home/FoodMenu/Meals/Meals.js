@@ -1,5 +1,6 @@
 import React from 'react';
 import { useRouteMatch, Switch, Route, } from 'react-router-dom';
+import Review from '../../../Order/OrderReview/Review/Review';
 import FoodDetails from '../FoodDetails/FoodDetails';
 import Lunch from '../Lunch/Lunch';
 import MealType from '../MealType/MealType';
@@ -21,9 +22,14 @@ const Meals = () => {
                     <MealType></MealType>
                 </Route>
             </Switch>
-            <Route path={`/home/details/:Id`}>
-                <FoodDetails></FoodDetails>
-            </Route>
+            <Switch>
+                <Route exact path={`/home/details/:Id`}>
+                    <FoodDetails></FoodDetails>
+                </Route>
+                <Route path="/home/review">
+                    <Review></Review>
+                </Route>
+            </Switch>
         </div >
     );
 };

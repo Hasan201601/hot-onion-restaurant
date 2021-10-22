@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Button } from "react-bootstrap"
-import { useParams } from 'react-router';
+import { Button, NavLink } from "react-bootstrap"
+import { useHistory, useParams } from 'react-router';
 import useMeals from '../../../../Hooks/useMeals';
 import './FoodDetail.css'
 
@@ -19,6 +19,10 @@ const FoodDetails = (props) => {
             return;
         }
         setNumber(number - 1)
+    }
+    const history = useHistory();
+    const goToReview = () => {
+        history.push('/home/review')
     }
     return (
         <div className="container">
@@ -42,6 +46,9 @@ const FoodDetails = (props) => {
                     <img src={detail?.mealImage} className="img-fluid" alt="" />
                 </div>
 
+            </div>
+            <div className="text-center">
+                <Button variant="danger" onClick={goToReview} disabled={false}>Proceed To CheckOut</Button>
             </div>
         </div>
     );

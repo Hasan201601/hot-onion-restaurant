@@ -4,9 +4,13 @@ import ShippingInfo from '../ShippingInfo/ShippingInfo';
 
 const Review = () => {
     return (
-        <div>
-            <ShippingInfo></ShippingInfo>
-            <Cart></Cart>
+        <div className="d-flex container justify-content-between">
+            <div style={{ width: '40%' }}>
+                <ShippingInfo></ShippingInfo>
+            </div>
+            <div>
+                <Cart></Cart>
+            </div>
         </div>
     );
 };
